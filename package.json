@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "weapp-storage": "^1.0.1"
   },
   "devDependencies": {
   },
