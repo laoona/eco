@@ -1,0 +1,4 @@
+<view>
+  <button bindtap="$onClick">点击请求</button>
+  <button bindtap="$onCancel">取消请求</button>
+</view>
