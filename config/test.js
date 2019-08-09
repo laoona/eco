@@ -5,4 +5,5 @@
  * @contact: laoono.com
  * @description: #
  */
- 
+
+module.exports = {};
