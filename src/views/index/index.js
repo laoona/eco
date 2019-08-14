@@ -26,10 +26,12 @@ Page({
 
     if (err) weapp.showToast({title: '请求失败'});
 
+    console.log(typeof res, res.length);
+
     this.setData({p});
   },
 
   async $onCancel() {
-    this.data.p.abort();
+    this.data.p && this.data.p.abort();
   }
 });

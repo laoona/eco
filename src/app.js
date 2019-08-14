@@ -1,15 +1,16 @@
-require('./libs/regeneratorRuntime');
 const weapp = require('./libs/index');
+const config = require('./config');
 
 weapp.addInterceptor(function(){
   return {
     data: {
-      a: 1
+      a: 21
     },
   }
 }, function (res) {
 });
 App({
   onLaunch: function () {
+    console.log(config);
   },
 });

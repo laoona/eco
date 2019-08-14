@@ -6,4 +6,6 @@
  * @description: #
  */
 
-module.exports = {};
+module.exports = {
+  host: 1
+};
