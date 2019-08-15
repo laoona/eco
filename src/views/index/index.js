@@ -27,8 +27,12 @@ Page({
     if (err) weapp.showToast({title: '请求失败'});
 
     console.log(typeof res, res.length);
+    const c = {
+      a: 1,
+      c: 3
+    }
 
-    this.setData({p});
+    this.setData({p, ...c});
   },
 
   async $onCancel() {
