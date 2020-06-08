@@ -215,7 +215,7 @@ var weapp = {
     const prefix = requestParams?.prefix;
     opts = Object.assign({}, requestParams, opts);
 
-    if (prefix) {
+    if (prefix && !/^https*:\/\/.+/g.test(opts.url)) {
       opts.url = `${prefix}${opts.url}`;
       delete opts?.prefix;
     }
