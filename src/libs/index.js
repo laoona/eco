@@ -212,7 +212,13 @@ var weapp = {
   request: function (opts) {
     const {requestParams, callback} = weapp;
 
+    const prefix = requestParams?.prefix;
     opts = Object.assign({}, requestParams, opts);
+
+    if (prefix) {
+      opts.url = `${prefix}${opts.url}`;
+      delete opts?.prefix;
+    }
 
     return request(opts, callback);
   },
