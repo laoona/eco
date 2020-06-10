@@ -1,6 +1,7 @@
 'use strict';
 
 var {onAndSyncApis, otherApis, noPromiseApis} = require('./native-apis');
+var {merge} = require('../utils/index');
 
 var RequestQueue = {
   MAX_REQUEST: 5,
@@ -213,7 +214,7 @@ var weapp = {
     const {requestParams, callback} = weapp;
 
     const prefix = requestParams?.prefix;
-    opts = Object.assign({}, requestParams, opts);
+    opts = merge({}, requestParams, opts);
 
     if (prefix && !/^https*:\/\/.+/g.test(opts.url)) {
       opts.url = `${prefix}${opts.url}`;
