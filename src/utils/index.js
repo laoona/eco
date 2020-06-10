@@ -2,8 +2,9 @@
  * @Author: laoono.com
  * @Date: 2019-03-25 19:27:11
  * @Last Modified by: laoono.com
- * @Last Modified time: 2019-07-10 11:33:38
+ * @Last Modified time: 2020-06-10 15:32:06
  */
+const merge = require('./merge');
 
 exports.to = function(promise) {
     if (!promise || !Promise.prototype.isPrototypeOf(promise)) {
@@ -21,3 +22,4 @@ exports.to = function(promise) {
     });
 };
 
+exports.merge = merge;
