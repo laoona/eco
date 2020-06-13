@@ -160,8 +160,7 @@ function processApis(weapp$) {
           } else {
             task = wx[key](obj);
           }
-        });
-
+        }).catch(() => {});
 
         if (key === 'uploadFile' || key === 'downloadFile') {
           p.progress = function (cb) {
