@@ -206,11 +206,12 @@ var weapp = {
   }, callback = function () {
 
   }) {
-    weapp.requestParams = requestParams();
+    weapp.requestParams = requestParams;
     weapp.callback = callback;
   },
-  request: function (opts) {
-    const {requestParams, callback} = weapp;
+  request: async function (opts) {
+    const {requestParams: $requestParams, callback} = weapp;
+    const requestParams = await $requestParams();
 
     const prefix = requestParams?.prefix;
     opts = merge({}, requestParams, opts);
